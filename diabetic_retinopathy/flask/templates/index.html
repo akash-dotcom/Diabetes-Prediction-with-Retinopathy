@@ -1,0 +1,267 @@
+<html>
+
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+
+        <title>Digital Retina scan Images Classification</title>
+
+        <meta name="theme-color" content="#ffffff">
+
+        <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/headers/">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="{{ url_for('static', filename='css/style_disease.css') }}" rel="stylesheet">    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+        <style>
+             @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Pixels&display=swap');
+            body {
+               align-items: left;
+                background-image: url("{{ url_for('static', filename='25761.jpg') }}");
+                background-size: 1600px 1400px;
+                background-repeat: no-repeat
+              }
+              .head{
+                text-transform: uppercase;
+                padding-left: 20px;
+                color: cornflowerblue;
+                font-size: 4.5rem;
+                font-family: 'Bebas Neue', cursive;
+              }
+              .imag{
+                /* display: flex;
+                flex-direction: row; */
+                align-items: center;
+                color: darkturquoise;
+                font-family: 'Bebas Neue', cursive;
+                font-size: 2rem;
+
+              }
+              .imag img{
+                height: 100px;
+                width: 100px;
+              }
+              .text{
+                max-width: 1200px;
+                font-family: 'Montserrat', sans-serif;
+                color: whitesmoke;
+                /* letter-spacing: 3px; */
+              }
+              .he{
+                font-family: 'Bebas Neue', cursive;
+                font-size: 3rem;
+                /* color: #00ff91; */
+                color: cornflowerblue;
+                letter-spacing: 2px;
+              }
+              .description{
+                color: darkturquoise;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+                font-family: 'Bebas Neue', cursive;
+              }
+              .upload-label{
+                border-radius: 30px;
+              }
+              .pppp{
+                /* color: black; */
+                font-size: 2.3rem;
+                /* letter-spacing: 2px; */
+                font-family: 'Bebas Neue', cursive;
+              }
+              .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: antiquewhite;
+    /* width: 100%; */
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: -60px;
+    text-align: left;
+    /* height: 45vh; */
+}
+.f-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: left;
+    margin-top: 30px;
+
+}
+.f-text p{
+    margin-left: -50px;
+}
+.names{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+}
+.students{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.akshat{
+    font-weight: bold;
+    color: black;
+    font-size: 1.6rem;
+    /* text-align: left; */
+    margin-left: -280px;
+}
+.zx{
+    color: darkgreen;
+    font-size: 1.28rem;
+    line-height: 50px;
+    /* text-align: left; */
+    margin-left: -280px;
+}
+.f-image img{
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+}
+.f-text img{
+    width: 80px;
+    height: 80px;
+    margin-left: -80px;
+    margin-top: -50px;
+}
+.f-text span{
+    color: black;
+    font-size: 2rem;
+    text-align: left;
+    margin-left: 0px;
+    margin-top: -60px;
+}
+.f-text p{
+    font-size: 2rem;
+    width: 700px;
+    text-align: left;
+}
+.akshatt{
+    font-weight: bold;
+    color: black;
+    font-size: 1.6rem;
+    /* text-align: left; */
+    margin-left: 0px;
+}
+.zxx{
+    color: darkgreen;
+    font-size: 1.28rem;
+    line-height: 50px;
+    /* text-align: left; */
+    margin-left: 0px;
+}
+        </style>
+        
+    </head>
+
+<body>
+   
+
+    <div class="very_main">
+
+        <header>
+            <br>
+            <br>
+            <div class="top_frame">
+                <p class="head">Diabetes Diagnosis Through Retinopathy</p>
+            </div>
+            <div class="imag">
+                <img src="{{ url_for('static', filename='akg.png') }}"> Project Initiative By AKGEC
+            </div>
+        </header>
+
+
+<br><br>
+         <p class="he"><u>Diabetic Retinopathy</u></p> 
+         <p class="text"> Diabetic retinopathy is a condition that may occur in people who have diabetes.
+            It causes progressive damage to the retina, the light-sensitive lining at the back of the
+            eye. Diabetic retinopathy is a serious sight-threatening complication of diabetes.
+            Diabetes interferes with the body's ability to use and store sugar (glucose).
+            The disease is characterized by too much sugar in the blood, which can cause
+            damage throughout the body, including the eyes.Over time, diabetes damages small
+            blood vessels throughout the body, including the retina. Diabetic retinopathy occurs
+            when these tiny blood vessels leak blood and other fluids. This causes the retinal tissue
+            to swell, resulting in cloudy or blurred vision.</p>
+        <br>
+        <p class="description">
+            Choose your image and click Predict to get your diagnosis.
+        </p>
+        <br>
+
+        <div>
+            <form id="upload-file" method="post" enctype="multipart/form-data">
+                <label for="imageUpload" class="upload-label">
+                    <h3 class="pppp">Upload Retina Scanned Image</h3>
+                </label>
+                <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+            </form>
+
+            <div class="image-section" style="display:none;">
+                <div class="img-preview">
+                    <div id="imagePreview">
+                    </div>
+                </div>
+            <div>
+                    <button type="button" class="upload-label" id="btn-predict">Predict</button>
+                </div>
+            </div>
+
+            <div class="loader" style="display:none;"></div>
+            
+            <h3 id="result" style="color:white">
+                <span> </span>
+            </h3>
+
+        </div>
+<br><br>
+        <div class="footer">
+            <div class="f-text">
+                <p>
+                    <u>Project Initiative By</u>
+                </p>
+                <div class="names">
+                    <div class="students">
+                        <div class="akshat">Developed By :</div>
+                        <div class="zx">Akshat Garg</div>
+                        <div class="zx">Akash Saini</div>
+                        <div class="zx">Ashish Sharma</div>
+                        <div class="zx">Ayushman Kaushal</div>
+                    </div>
+                    <div class="students">
+                        <div class="akshatt">Faculty Incharge</div>
+                        <div class="zxx"> Dr. Inderjeet Kaur</div><br>
+                        <div class="akshatt">Head Of Department</div>
+                        <div class="zxx"> Dr. Sunita Yadav</div>
+                    </div>
+                </div><br><br>
+                <img src="{{ url_for('static', filename='akg.png') }}"><span>AKGEC</span>
+            </div>
+            <div class="f-image">
+                <img src="{{ url_for('static', filename='footer.png') }}">
+            </div>
+        </div>
+        
+
+    </div>
+
+
+
+        <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>    
+   
+
+</body>
+
+</html> 
